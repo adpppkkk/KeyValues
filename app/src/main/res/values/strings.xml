@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">KeyValues</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="saved_button_press_count_key">TimesPressed</string>
+    <string name="saved_most_press_count">MostPressed</string>
+    <string name="title_start">Click to start!</string>
+    <string name="initial_count">0 Clicks</string>
+</resources>
