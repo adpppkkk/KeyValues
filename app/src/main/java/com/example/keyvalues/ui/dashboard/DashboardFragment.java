@@ -22,7 +22,7 @@ import com.example.keyvalues.R;
 public class DashboardFragment extends Fragment {
 
     private DashboardViewModel dashboardViewModel;
-    public View Textview;
+    public View ScoreBoard;
     public TextView Time,ClickCount;
     private int counter;
     private CountDownTimer countdowntimer;
@@ -33,7 +33,7 @@ public class DashboardFragment extends Fragment {
         dashboardViewModel =
                 ViewModelProviders.of(this).get(DashboardViewModel.class);
         View root = inflater.inflate(R.layout.fragment_dashboard, container, false);
-        final TextView textView = root.findViewById(R.id.text_dashboard);
+        final TextView ScoreBoard = root.findViewById(R.id.text_dashboard);
         final TextView Time = root.findViewById(R.id.timer);
         final TextView ClickCount = root.findViewById(R.id.counter);
         SharedPreferences Preference = getActivity().getSharedPreferences("SCORE", Context.MODE_PRIVATE);
@@ -41,7 +41,7 @@ public class DashboardFragment extends Fragment {
         dashboardViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
-                textView.setText("The best score is "+ Bestsocre + " clicks!");
+                ScoreBoard.setText("The best score is "+ Bestsocre + " clicks!");
             }
 
 
@@ -90,10 +90,10 @@ public class DashboardFragment extends Fragment {
                             SharedPreferences.Editor editor = getActivity().getSharedPreferences("SCORE",Context.MODE_PRIVATE).edit();
                             editor.putInt("Bestscore",counter);
                             editor.commit();
-                            textView.setText("The best score is "+ counter + " clicks!");
+                            ScoreBoard.setText("The best score is "+ counter + " clicks!");
                         }
                         else{
-                            textView.setText("The best score is "+ Bestsocre + " clicks!");
+                            ScoreBoard.setText("The best score is "+ Bestsocre + " clicks!");
                         }
                     }
                 }.start();
