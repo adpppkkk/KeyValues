@@ -20,16 +20,17 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/Trigger"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="301dp"
-        android:layout_marginBottom="304dp"
+        android:id="@+id/trigger_button"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="150dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias=".5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_dashboard"
+        app:layout_constraintTop_toBottomOf="@id/Start"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@mipmap/ic_launcher" />
 
     <Button
@@ -39,13 +40,13 @@
         android:layout_marginTop="221dp"
         android:layout_marginBottom="32dp"
         android:text="@string/title_start"
-        app:layout_constraintBottom_toTopOf="@+id/Trigger"
+        app:layout_constraintBottom_toTopOf="@+id/trigger_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_dashboard" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/timer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
